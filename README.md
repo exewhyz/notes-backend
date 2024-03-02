@@ -1,16 +1,4 @@
-Create an account on github
-login to github and create a new repository
-create .gitignore file
-in .gitignore file write - /node_modules
-run- git init
-run- git add .
-run- git commit -m "first commit"
-run git remote add origin https://github.com/exewhyz/notes-backend.git
-
-run- git branch -M main
-run- git push -u origin main
-
-- Day 3 (Express.js)
+# Day 3 (Express.js)
 
 ## Express Framework
 
@@ -36,17 +24,16 @@ The above command will download all packages and create a node_modules folder
 To run the file use the following command:
 
 ```bash
-node refinedServer.js
+npm run start
 ```
 Open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
 
 
 ## you can test all the routes in the thunder client to get the response.
 
-#### to test these apis run your refinedServer.js file ( recommended ).
+#### to test these apis run your first restart your server.
 
-##### refindServer.js file is also Notebook and it has been modified to handle all the errors of our server.
-- It is basically the upgraded version of the server.js file.
+- Start your MongoDB Compass Server by clicking on connect button.
 
 ## To Fetch all the notes
 ### for example
@@ -54,7 +41,7 @@ Open [http://localhost:5000](http://localhost:5000) with your browser to see the
 - you want to fetch all the notes open your thunder client and create a new request.
 - select GET method and enter your localhost url like:
 ```bash
-    http://localhost:5000/notes
+    http://localhost:5000/getNotes
 ```
 - click on send button.
 
@@ -64,7 +51,7 @@ Open [http://localhost:5000](http://localhost:5000) with your browser to see the
 - select POST method and enter your localhost url like:
 
 ```bash
-    http://localhost:5000/create
+    http://localhost:5000/createNote
 ```
 
 - go to body tab and select JSON tab.
@@ -72,15 +59,15 @@ Open [http://localhost:5000](http://localhost:5000) with your browser to see the
 
 ```bash
     {
-        "title":"Data Science",
-        "body":"This is a Data Science Note",
-        "tag": "alpha"
+        "title":"Maths",
+        "description":"This is a Maths Note",
+        "tags": "IT"
     }
 ```
 
 - Click on the send button.
 
-- if you want to create a new note just change all the values of the above object and paste in that body tab in thiunder client and send request.
+- if you want to create a new note just change all the values of the above object and paste in that body tab in thunder client and send request.
 
 
 ## To Update a new Note
@@ -90,16 +77,16 @@ Open [http://localhost:5000](http://localhost:5000) with your browser to see the
 - select PUT method and enter your localhost url like:
 
 ```bash
-    http://localhost:5000/update/Data-Science
+    http://localhost:5000/update/write-an-id-of-an-note
 ```
 - go to body tab and select JSON tab.
 - And paste the following :
 
 ```bash
     {
-        "title":"Data Science",
-        "body":"This is Updated Data Science Note",
-        "tag": "alpha"
+        "title":"AIML",
+        "description":"This is an AIML Note",
+        "tags": "IT"
     }
 ```
 - Click on the send button.
@@ -112,7 +99,43 @@ Open [http://localhost:5000](http://localhost:5000) with your browser to see the
 - select DELETE method and enter your localhost url like:
 
 ```bash
-    http://localhost:5000/delete/Data-Science
+    http://localhost:5000/delete/write-an-id-of-an-note
 ```
 - Click on the send button. //It will delete the note.
-(Express.js)
+
+
+# How to upload your code or project on github.
+
+## Create an account on github.
+
+- Login to github and create a new repository.
+
+- Create **.gitignore** file in your projects folder of VS Code.
+
+- In **.gitignore** file write: /node_modules.
+
+- Run this command
+
+```bash
+git init
+```
+
+- Run this command in VS code terminal.
+
+```bash
+git add .
+```
+  
+- Run this command in VS code terminal.
+
+```bash
+git commit -m "first commit"
+```
+- Run this command in VS code terminal.
+
+##### here you have to use your own repository Url - you will get that Url after creating an repository. 
+```bash
+git remote add origin your-repository-url
+git branch -M main
+git push -u origin main
+```
